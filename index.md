@@ -1,5 +1,8 @@
 ## Welcome to GitHub Pages
 
+![Github Logo](/photos/me.jpg)
+Format: ![Alt Text](url)
+
 You can use the [editor on GitHub](https://github.com/seyong2/seyong2.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
