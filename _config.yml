@@ -1,2 +1,3 @@
 name: "Juan Pablo's personal website"
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
