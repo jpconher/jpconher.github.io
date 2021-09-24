@@ -57,10 +57,9 @@ ul.posts li {
 }
 
 .wrapper .sidebar h2{
-  color: #fff;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .wrapper .sidebar ul li{
