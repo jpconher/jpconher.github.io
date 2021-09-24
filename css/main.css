@@ -115,3 +115,6 @@ ul.posts li {
     margin-left: auto;
     margin-right: auto;
 }
+
+.wrapper .container {
+    margin-left: 100px;
