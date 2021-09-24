@@ -107,3 +107,11 @@ ul.posts li {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+
+.profile {
+    margin-bottom: 20px;
+    max-width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
