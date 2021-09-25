@@ -1,5 +1,5 @@
 body {
-    margin: 1px auto;
+    margin: 60px auto;
     width: 70%;
 }
 nav ul, footer ul {
@@ -14,7 +14,7 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: #5483F0;
 }
 a:hover {
     text-decoration: underline;
