@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>{{ page.title }}</title>  <!-- defines the title of the document. It appears in the browser's title bar. -->
+			<!-- defines the title of the document (it appears in the browser's title bar) -->
+			<title>{{ page.title }}</title> 
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			
+			<!-- Include google analytics -->
+			{% if site.google_analytics and jekyll.environment == 'production' %}
+				{% include analytics.html %}
+			{% endif %}
 		</head>
 		<body>	
 			<div class="wrapper">
