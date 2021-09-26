@@ -7,5 +7,15 @@ google_analytics: G-C485CSRLQ2
 
 plugins:
   - jekyll-seo-tag
+  
+# SEO plugin
+author: Juan Pablo Conejero y Herrera
+twitter:
+  username: jpconher
+  card: summary
+social:
+  - https://twitter.com/jpconher
+  - https://www.linkedin.com/in/juanpabloconejero
+  - https://github.com/jpconher
 
 
