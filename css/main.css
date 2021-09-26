@@ -9,7 +9,7 @@ nav ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 nav ul li {
@@ -85,27 +85,6 @@ ul.posts li a{
 
 .wrapper .sidebar ul li a .fas{
   width: 25px;
-}
- 
-.wrapper .sidebar .social_media{
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.wrapper .sidebar .social_media a{
-  display: block;
-  width: 40px;
-  background: #594f8d;
-  height: 40px;
-  line-height: 45px;
-  text-align: center;
-  margin: 0 5px;
-  color: #bdb8d7;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .profile {
