@@ -58,6 +58,10 @@ ul.posts li {
   position: fixed;
 }
 
+.wrapper .sidebar h1{
+  color: #000000; 
+}
+
 .wrapper .sidebar h2{
   text-transform: uppercase;
   color: #000000;
