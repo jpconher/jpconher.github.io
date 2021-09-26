@@ -58,7 +58,7 @@ ul.posts li {
     margin-left: 20px; 
 }
 
-a.posts{
+ul.posts li a{
     font-size: 12pt;   
 }
 
