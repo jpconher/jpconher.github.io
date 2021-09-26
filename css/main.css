@@ -120,3 +120,7 @@ ul.posts li a{
 .wrapper .container {
     margin-left: 400px;
 }
+
+.social li {
+    display: inline;
+}
