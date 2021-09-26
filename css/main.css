@@ -51,12 +51,15 @@ ul.posts {
     padding: 0;
     margin-top: 20px;
     margin-left: 0px;
-    font-size: 12pt;
 }
 
 ul.posts li {
     list-style: none;
     margin-left: 20px; 
+}
+
+a.posts{
+    font-size: 12pt;   
 }
 
 .flexcontainer {
