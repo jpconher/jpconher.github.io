@@ -19,7 +19,7 @@ nav ul li {
 
 a {
     text-decoration: none;
-    color: #4c8c0a;
+    color: #0000FF;
 }
 
 nav ul li a{
@@ -75,7 +75,7 @@ ul.posts li {
 }
 
 .wrapper .sidebar ul li:hover a{
-  color: #93C572;
+  color: #3895D3;
 }
 
 .wrapper .sidebar ul li a .fas{
