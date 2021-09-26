@@ -21,11 +21,6 @@ nav ul li a{
     padding: 5px;
 }
 
-a {
-    text-decoration: none;
-    color: #072F5F;
-}
-
 h1 {
     font-size: 22pt;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -74,17 +69,17 @@ ul.posts li {
   color: #000000; 
 }
 
-.wrapper .sidebar ul li a{
-  color: 6190FD;
+a {
+  color: #0000FF;
   border-width: 1em;
+}
+
+:hover a{
+  color: #ADD8E6;
 }
 
 .wrapper .sidebar ul li a .fas{
   width: 25px;
-}
-    
-.wrapper .sidebar ul li:hover a{
-  color: #3895D3;
 }
  
 .wrapper .sidebar .social_media{
