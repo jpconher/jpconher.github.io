@@ -54,6 +54,7 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+    margin: 20px auto 40px; 
 }
 
 .flexcontainer {
