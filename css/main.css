@@ -1,5 +1,5 @@
 body {
-    margin: 10px auto;
+    margin: 30px auto;
     width: 70%;
     font-size: 12pt;
 }
@@ -27,17 +27,17 @@ a {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 20pt;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 18pt;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 15pt;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
@@ -118,5 +118,4 @@ ul.posts li {
 
 .wrapper .container {
     margin-left: 400px;
-    margin-top: 100px
 }
