@@ -30,6 +30,16 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
+h2 {
+    font-size: 20px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+h3 {
+    font-size: 15px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
 p {
     font-size: 1.2em;
     line-height: 1.1em;
@@ -60,13 +70,6 @@ ul.posts li {
 
 .wrapper .sidebar h1{
   color: #000000; 
-}
-
-.wrapper .sidebar h2{
-  text-transform: uppercase;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 .wrapper .sidebar ul li a{
