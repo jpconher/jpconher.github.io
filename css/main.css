@@ -80,13 +80,9 @@ ul.posts li {
 .wrapper .sidebar ul li a .fas{
   width: 25px;
 }
-
-.wrapper .sidebar ul li:hover{
-  background-color: #594f8d;
-}
     
 .wrapper .sidebar ul li:hover a{
-  color: #fff;
+  color: #3895D3;
 }
  
 .wrapper .sidebar .social_media{
