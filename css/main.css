@@ -12,7 +12,7 @@ nav ul, footer ul {
 
 nav ul li, footer ul li {
     display: block;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 a {
