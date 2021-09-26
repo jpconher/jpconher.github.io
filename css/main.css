@@ -78,7 +78,7 @@ ul.posts li {
 
 .wrapper .sidebar ul li a{
   color: 6190FD;
-  display: block;
+  border-width: thin;
 }
 
 .wrapper .sidebar ul li a .fas{
