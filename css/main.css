@@ -19,11 +19,7 @@ nav ul li {
 
 a {
     text-decoration: none;
-    color: #000080;
-}
-
-:hover a{
-  color: #3895D3;
+    color: #0000FF;
 }
 
 nav ul li a{
