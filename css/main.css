@@ -17,6 +17,11 @@ nav ul li {
     margin-top: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: #072F5F;
+}
+
 nav ul li a{
     padding: 5px;
 }
@@ -69,14 +74,13 @@ ul.posts li {
   color: #000000; 
 }
 
-a {
-  color: #0000FF;
+.wrapper .sidebar ul li a{
+  color: 6190FD;
   border-width: 1em;
-  text-decoration: none;
 }
 
-:hover a{
-  color: #ADD8E6;
+.wrapper .sidebar ul li:hover a{
+  color: #3895D3;
 }
 
 .wrapper .sidebar ul li a .fas{
