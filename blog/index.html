@@ -6,8 +6,10 @@ title2: Blog
 
 	<h2>{{ page.title2 }}</h2>
 	<ul class="posts">
-		<h3>2021</h3>
-		{% for post in site.posts/2021 %} 
-	    		<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+		<h3>2021</h3> <!-- print blogs from 2021 -->
+		{% for post in site.posts %}
+			{% if post.date contains '2021' %}
+	    			<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+			{% endif %}
 	  	{% endfor %}
 	</ul>
