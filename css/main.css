@@ -48,7 +48,8 @@ p {
 }
 
 ul.posts { 
-    margin: 20px 0px 40px; 
+    padding: 0;
+    margin-top: 20px; 
     font-size: 1em;
 }
 
