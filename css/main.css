@@ -121,9 +121,12 @@ ul.posts li a{
     margin-left: 400px;
 }
 
-.social li {
+.social {
     display: inline;
-    margin-right: 10px;
-    margin-top: -20px;
     border-top: 1px solid #d5d5d5
+    margin-top: -20px;
+}
+
+.social li {
+    margin-right: 10px;
 }
