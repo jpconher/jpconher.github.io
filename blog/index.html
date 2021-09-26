@@ -6,11 +6,8 @@ title2: Blog
 
 	<h2>{{ page.title2 }}</h2>
 	<ul class="posts">
-
-	  {% for year in site.posts %} <!--  foreach loop to create an unordered list of our blog posts -->
-		<h3>year</h3>
-		{% for post in site.posts.year %} 
+		<h3>2021</h3>
+		{% for post in site.posts.2021 %} 
 	    		<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	  	{% endfor %}
-	{% endfor %}
 	</ul>
