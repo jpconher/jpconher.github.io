@@ -5,7 +5,8 @@ permalink: /blog/:year/:month/:day/:title
 # Google Analytics
 google_analytics: G-C485CSRLQ2
 
-plugins:
+url: "https://jpconher.github.io" # the base hostname & protocol for your site
+plugins: 
   - jekyll-seo-tag
   - jekyll-sitemap
   
