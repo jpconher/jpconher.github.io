@@ -16,7 +16,7 @@ title2: Blog
       				{% endif %}
     			{% endunless %}
     			<li>
-      				<li><span>{{ post.date | %b %d }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+      				<li><span>{{ post.date | date: %b %d }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
     			</li>
   		{% endfor %}
 	</ul>
