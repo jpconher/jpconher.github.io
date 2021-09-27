@@ -10,13 +10,13 @@ layout: null
         
         <url>
                 <loc>https://jpconher.github.io/</loc>
-                <lastmod>{{ site.date | date_to_xmlschema }}</lastmod>
+                <lastmod>2021-09-27T11:33:00+00:00</lastmod>
                 <priority>1.00</priority>
         </url>
 
         <url>
                 <loc>https://jpconher.github.io/blog/</loc>
-                <lastmod>{{ site.blog.date | date_to_xmlschema }}</lastmod>
+                <lastmod>2021-09-27T11:33:00+00:00</lastmod>
                 <priority>0.8</priority>
         </url>    
         
