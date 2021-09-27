@@ -1,55 +1,56 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<!-- defines the title of the document (it appears in the browser's title bar) -->
-			<title>{{ page.title }}</title> 
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			
-			<!-- Include google analytics -->
-			{% if site.google_analytics and jekyll.environment == 'production' %}
-				{% include analytics.html %}
-			{% endif %}
-			
-			<!-- SEO plugin -->
-			{% seo title=false %}
-			
-			<!-- FontAwesome -->
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-		</head>
-		<body>	
-			<div class="wrapper">
-    				<div class="sidebar">
-        				<div style="text-align: center">
-						<h1>Juan Pablo Conejero</h1> 						
-						<img class = "profile" src="https://avatars.githubusercontent.com/u/34621340?s=400&u=2cda0182c62a7bd08287ffc12b8b3d817baef1e1&v=4" alt="Profile picture"/>
-					</div>
-					<nav>
-						<ul>
+<html lang="{{ site.lang | default: "en-UK" }}">
+<html>
+	<head>
+		<!-- defines the title of the document (it appears in the browser's title bar) -->
+		<title>{{ page.title }}</title> 
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+		<!-- Include google analytics -->
+		{% if site.google_analytics and jekyll.environment == 'production' %}
+			{% include analytics.html %}
+		{% endif %}
+
+		<!-- SEO plugin -->
+		{% seo title=false %}
+
+		<!-- FontAwesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	</head>
+	<body>	
+		<div class="wrapper">
+			<div class="sidebar">
+				<div style="text-align: center">
+					<h1>Juan Pablo Conejero</h1> 						
+					<img class = "profile" src="https://avatars.githubusercontent.com/u/34621340?s=400&u=2cda0182c62a7bd08287ffc12b8b3d817baef1e1&v=4" alt="Profile picture"/>
+				</div>
+				<nav>
+					<ul>
+						<br>
+						<div style="text-align: center">
+							<li><a href="/">About me</a></li>
+							<li><a href="/assets/docs/CV_Juan_Conejero.pdf" target=”_blank”>CV</a></li>
+							<li><a href="/blog">Blog</a></li>
+						</div>
+					</ul>
+					<ul class="social">
+						<div style="text-align: center">
 							<br>
-							<div style="text-align: center">
-								<li><a href="/">About me</a></li>
-								<li><a href="/assets/docs/CV_Juan_Conejero.pdf" target=”_blank”>CV</a></li>
-								<li><a href="/blog">Blog</a></li>
-							</div>
-						</ul>
-						<ul class="social">
-							<div style="text-align: center">
-								<br>
-								<li><a href="https://github.com/jpconher" target="_blank"><i class="fab fa-github" style="font-size: 30px"></i></a></li>
-                  						<li><a href="https://www.linkedin.com/in/juanpabloconejero/" target="_blank"><i class="fab fa-linkedin-in" style="font-size: 30px"></i></a></li>
-								<li><a href="https://twitter.com/jpconher" target="_blank"><i class="fab fa-twitter" style="font-size: 30px"></i></a></li>
-                  						<li><a href="mailto:juanpablo.conejero@gmail.com"><i class="far fa-envelope" style="font-size: 30px"></i></a></li>
-							</div>
-						</ul>
-						
-					</nav>
-    				</div>
-				<div class="container">
-			
-					{{ content }}
-			
-				</div><!-- /.container -->
-			</div class="wrapper">
-		</body>
-	</html>
+							<li><a href="https://github.com/jpconher" target="_blank"><i class="fab fa-github" style="font-size: 30px"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/juanpabloconejero/" target="_blank"><i class="fab fa-linkedin-in" style="font-size: 30px"></i></a></li>
+							<li><a href="https://twitter.com/jpconher" target="_blank"><i class="fab fa-twitter" style="font-size: 30px"></i></a></li>
+							<li><a href="mailto:juanpablo.conejero@gmail.com"><i class="far fa-envelope" style="font-size: 30px"></i></a></li>
+						</div>
+					</ul>
+
+				</nav>
+			</div>
+			<div class="container">
+
+				{{ content }}
+
+			</div><!-- /.container -->
+		</div class="wrapper">
+	</body>
+</html>
