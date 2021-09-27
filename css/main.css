@@ -1,4 +1,4 @@
-@media only screen and (min-width: 800px) { 
+@media only screen and (min-width: 1000px) { 
     body {
         margin: 50px auto;
         width: 70%;
@@ -6,7 +6,7 @@
     }
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 1000px) { 
     body {
     margin: 10px auto;
     width: 90%;
@@ -112,7 +112,7 @@ ul.posts li a{
     border-radius: 50%;
 }
 
-@media only screen and (min-width: 800px) { 
+@media only screen and (min-width: 1000px) { 
     .social {
         border-top: 1px solid #d5d5d5;
         margin-top: 20px;
@@ -120,6 +120,7 @@ ul.posts li a{
     
     .social lu {
         margin-top: 20px;
+    }
     
     .social li {
         display: inline;
@@ -129,9 +130,13 @@ ul.posts li a{
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .social {
         border-bottom: 1px solid #d5d5d5;
+        margin-bottom: 20px;
+    }
+    
+    .social lu {
         margin-bottom: 20px;
     }
     
