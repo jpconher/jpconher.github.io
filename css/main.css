@@ -112,34 +112,19 @@ ul.posts li a{
     border-radius: 50%;
 }
 
-@media only screen and (min-width: 1000px) { 
-    .social {
-        border-top: 1px solid #d5d5d5;
-        margin-top: 20px;
-    }
+.social {
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 3px solid #d5d5d5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ 
     
-    .social li {
+ .social li {
         display: inline;
         margin-right: 10px;
         padding-top: 20px;
-    }
-}
-
-@media only screen and (max-width: 1000px) { 
-    .social {
-        border-top: 1px solid #d5d5d5;
-        border-bottom: 2px solid #d5d5d5;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .social li {
-        display: inline;
-        margin-right: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-}
+ }
     
 .social lu {
     display: block;
