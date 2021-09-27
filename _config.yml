@@ -1,7 +1,6 @@
 name: "Juan Pablo's personal website"
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-theme: jekyll-theme-minimal
 
 # Google Analytics
 google_analytics: G-C485CSRLQ2
