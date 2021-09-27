@@ -119,6 +119,7 @@ ul.posts li a{
     }
     
     .social lu {
+        display: block;
         margin-top: 20px;
     }
     
@@ -136,7 +137,9 @@ ul.posts li a{
     }
     
     .social lu {
+        display: block;
         margin-bottom: 20px;
+        
     }
     
     .social li {
