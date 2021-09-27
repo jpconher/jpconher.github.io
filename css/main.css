@@ -115,7 +115,7 @@ ul.posts li a{
 @media only screen and (min-width: 800px) { 
     .social ul {
         border-top: 1px solid #d5d5d5;
-        margin-top: 40px;
+        margin-top: 20px;
     }
     
     .social li {
