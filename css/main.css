@@ -1,7 +1,17 @@
-body {
-    margin: 50px auto;
+@media (min-width: 800px) { 
+    body {
+    margin: 0px auto;
     width: 70%;
     font-size: 12pt;
+    }
+}
+
+@media (max-width: 800px) { 
+    body {
+    margin: 10px auto;
+    width: 100%;
+    font-size: 12pt;
+    }
 }
 
 nav ul {
