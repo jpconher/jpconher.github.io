@@ -1,222 +1,112 @@
-@media (min-width: 640px) {
-
-    body {
-        margin: 50px auto;
-        width: 70%;
-        font-size: 12pt;
-    }
-
-    nav ul {
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-        padding: 0px;
-        list-style: none;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    a {
-        text-decoration: none;
-        color: #0000FF;
-    }
-
-    nav ul li a{
-        padding: 5px;
-    }
-
-    h1 {
-        font-size: 22pt;
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    }
-
-    h2 {
-        font-size: 17pt;
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    }
-
-    h3 {
-        font-size: 14pt;
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    }
-
-    p {
-        font-size: 1.2em;
-        line-height: 1.1em;
-        color: #333;
-    }
-
-    ul.posts { 
-        padding: 0;
-        margin-top: 20px;
-        margin-left: 0px;
-    }
-
-    ul.posts li {
-        list-style: none;
-        margin-left: 20px; 
-    }
-
-    ul.posts li a{
-        font-size: 1.2em;   
-    }
-
-    .flexcontainer {
-        display: flex;
-        flex-direction: column;    
-    }
-
-    .wrapper .sidebar{
-        width: 300px;
-        height: 100%;
-        background: #FFFFFF;
-        padding: 0px 0px;
-        position: fixed;  
-    }
-
-    .wrapper .sidebar h1{
-      color: #000000; 
-    }
-
-    .wrapper .sidebar ul li:hover a{
-      color: #3895D3;
-    }
-
-    .wrapper .sidebar ul li a .fas{
-      width: 25px;
-    }
-
-    .profile {
-        margin-bottom: 20px;
-        max-width: 250px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 50%;
-    }
-
-    .wrapper .container {
-        margin-left: 400px;
-    }
-
-    .social {
-        border-top: 1px solid #d5d5d5;
-        margin-top: 0px;
-    }
-
-    .social li {
-        display: inline;
-        margin-right: 10px;
-        margin-top: 0px;
-    }
-    
+body {
+    margin: 50px auto;
+    width: 70%;
+    font-size: 12pt;
 }
 
-@media (max-width: 640px) {
-    
-    body {
-        margin: 5px auto;
-        width: 100%;
-        font-size: 12pt;
-    }
+nav ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
 
-    nav ul {
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-        padding: 0px;
-        list-style: none;
-        font-weight: bold;
-        margin-top: 5px;
-    }
+nav ul li {
+    display: block;
+    margin-bottom: 20px;
+}
 
-    nav ul li {
-        display: block;
-        margin-bottom: 5px;
-    }
+a {
+    text-decoration: none;
+    color: #0000FF;
+}
 
-    a {
-        text-decoration: none;
-        color: #0000FF;
-    }
+nav ul li a{
+    padding: 5px;
+}
 
-    nav ul li a{
-        padding: 5px;
-    }
+h1 {
+    font-size: 22pt;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
 
-    h1 {
-        font-size: 22pt;
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    }
+h2 {
+    font-size: 17pt;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
 
-    h2 {
-        font-size: 17pt;
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    }
+h3 {
+    font-size: 14pt;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
 
-    h3 {
-        font-size: 14pt;
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    }
+p {
+    font-size: 1.2em;
+    line-height: 1.1em;
+    color: #333;
+}
 
-    p {
-        font-size: 1.2em;
-        line-height: 1.1em;
-        color: #333;
-    }
+ul.posts { 
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 0px;
+}
 
-    ul.posts { 
-        padding: 0;
-        margin-top: 20px;
-        margin-left: 0px;
-    }
+ul.posts li {
+    list-style: none;
+    margin-left: 20px; 
+}
 
-    ul.posts li {
-        list-style: none;
-        margin-left: 20px; 
-    }
+ul.posts li a{
+    font-size: 1.2em;   
+}
 
-    ul.posts li a{
-        font-size: 1.2em;   
-    }
+.flexcontainer {
+    display: flex;
+    flex-direction: column;    
+}
 
-    .wrapper .sidebar{
-        height: 100%;
-        background: #FFFFFF;
-        padding: 0px 0px; 
-    }
+.wrapper .sidebar{
+    width: 300px;
+    height: 100%;
+    background: #FFFFFF;
+    padding: 0px 0px;
+    position: fixed;  
+}
 
-    .wrapper .sidebar h1{
-      color: #000000; 
-    }
+.wrapper .sidebar h1{
+  color: #000000; 
+}
 
-    .wrapper .sidebar ul li:hover a{
-      color: #3895D3;
-    }
+.wrapper .sidebar ul li:hover a{
+  color: #3895D3;
+}
 
-    .wrapper .sidebar ul li a .fas{
-      width: 25px;
-    }
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
 
-    .profile {
-        margin-bottom: 20px;
-        max-width: 250px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 50%;
-    }
+.profile {
+    margin-bottom: 20px;
+    max-width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
 
-    .social {
-        border-top: 1px solid #d5d5d5;
-        margin-top: 0px;
-    }
+.wrapper .container {
+    margin-left: 400px;
+}
 
-    .social li {
-        display: inline;
-        margin-right: 10px;
-        margin-top: 0px;
-    }
-    
+.social {
+    border-top: 1px solid #d5d5d5;
+    margin-top: 0px;
+}
+
+.social li {
+    display: inline;
+    margin-right: 10px;
+    margin-top: 0px;
 }
