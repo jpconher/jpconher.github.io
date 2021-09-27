@@ -100,12 +100,12 @@ ul.posts li a{
     margin-left: 400px;
 }
 
-.wrapper .container :hover a{
-  color: #3895D3;
+.wrapper .container a {
+    padding: 5px;
 }
 
-.wrapper .sidebar ul li a .fas{
-  width: 25px;
+.wrapper .container :hover a{
+  color: #3895D3;
 }
 
 .social {
