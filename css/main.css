@@ -104,6 +104,10 @@ ul.posts li a{
   color: #3895D3;
 }
 
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
 .social {
     border-top: 1px solid #d5d5d5;
     margin-top: 0px;
