@@ -68,11 +68,13 @@ ul.posts li a{
 }
 
 .wrapper .sidebar{
-  width: 300px;
-  height: 100%;
-  background: #FFFFFF;
-  padding: 0px 0px;
-  position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #FFFFFF;
+    padding: 0px 0px;
+    position: fixed;
+    margin-top: 50px;
+  
 }
 
 .wrapper .sidebar h1{
