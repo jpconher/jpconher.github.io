@@ -113,10 +113,13 @@ ul.posts li a{
 }
 
 @media only screen and (min-width: 800px) { 
-    .social ul {
+    .social {
         border-top: 1px solid #d5d5d5;
         margin-top: 20px;
     }
+    
+    .social lu {
+        margin-top: 20px;
     
     .social li {
         display: inline;
