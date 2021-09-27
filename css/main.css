@@ -112,11 +112,12 @@ ul.posts li a{
     border-radius: 50%;
 }
 
-.social {
-    border-bottom: 2px solid #d5d5d5;
-    margin-bottom: 20px;
+@media only screen and (max-width: 1000px) { 
+    .social {
+        border-bottom: 2px solid #d5d5d5;
+        margin-bottom: 20px;
+    }
 }
- 
     
  .social li {
         display: inline;
