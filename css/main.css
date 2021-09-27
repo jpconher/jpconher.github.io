@@ -116,6 +116,7 @@ ul.posts li a{
     .social {
         border-top: 1px solid #d5d5d5;
         margin-top: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -124,7 +125,9 @@ ul.posts li a{
         border-top: 1px solid #d5d5d5;
         border-bottom: 2px solid #d5d5d5;
         margin-top: 20px;
+        padding-top: 20px;
         margin-bottom: 20px;
+        padding-bottom: 20px;
     }
 }
     
