@@ -100,14 +100,6 @@ ul.posts li a{
     margin-left: 400px;
 }
 
-.wrapper .container a {
-    padding: 5px;
-}
-
-.wrapper .container :hover a{
-  color: #3895D3;
-}
-
 .social {
     border-top: 1px solid #d5d5d5;
     margin-top: 0px;
