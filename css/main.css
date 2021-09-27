@@ -1,6 +1,6 @@
 @media (min-width: 800px) { 
     body {
-    margin: 20px auto;
+    margin: 50px auto;
     width: 70%;
     font-size: 12pt;
     }
@@ -8,7 +8,7 @@
 
 @media (max-width: 800px) { 
     body {
-    margin: 10px 5px;
+    margin: 200px 5px;
     width: 100%;
     font-size: 12pt;
     }
