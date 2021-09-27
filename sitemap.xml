@@ -8,6 +8,18 @@ layout: null
         xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
         xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
         
+        <url>
+                <loc>https://jpconher.github.io/</loc>
+                <lastmod>{{ site.date | date_to_xmlschema }}</lastmod>
+                <priority>1.00</priority>
+        </url>
+
+        <url>
+                <loc>https://jpconher.github.io/blog/</loc>
+                <lastmod>{{ site.blog.date | date_to_xmlschema }}</lastmod>
+                <priority>0.8</priority>
+        </url>    
+        
         {% for post in site.posts %}
                 <url>
                         <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
@@ -17,18 +29,8 @@ layout: null
                                 <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
                         {% endif %}
                         <changefreq>weekly</changefreq>
-                        <priority>1.0</priority>
+                        <priority>0.64</priority>
                 </url>
         {% endfor %}
-
-        {% for page in site.pages %}
-                {% if page.sitemap == yes }
-                        <url>
-                                <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
-                                <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
-                                <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-                                <priority>{{ page.priority }}</priority>
-                        </url>
-                {% endif %}
-        {% endfor %}
+        
 </urlset>
