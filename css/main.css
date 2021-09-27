@@ -118,8 +118,9 @@ ul.posts li a{
         margin-top: 20px;
     }
     
-    .social lu {
-        display: block;
+    .social li {
+        display: inline;
+        margin-right: 10px;
         padding-top: 20px;
     }
 }
@@ -132,14 +133,14 @@ ul.posts li a{
         margin-bottom: 20px;
     }
     
-    .social lu {
-        display: block;
+    .social li {
+        display: inline;
+        margin-right: 10px;
         padding-top: 20px;
         padding-bottom: 20px;
     }
 }
     
-.social li {
-    display: inline;
-    margin-right: 10px;
+.social lu {
+    display: block;
 }
