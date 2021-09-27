@@ -5,6 +5,9 @@ permalink: /blog/:year/:month/:day/:title
 # Google Analytics
 google_analytics: G-C485CSRLQ2
 
+url: "https://jpconher.github.io"
+baseurl: ""
+
 plugins: 
   - jekyll-seo-tag
   
