@@ -3,7 +3,7 @@ layout: default <!-- uses default.html as base -->
 ---
 
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<p>{{ page.date | date_to_string }} - Written by {{ page.author }}</p>
 
 <div class="post">
   {{ content }}
