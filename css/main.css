@@ -117,6 +117,12 @@ ul.posts li a{
         border-top: 1px solid #d5d5d5;
         margin-top: 20px;
     }
+    
+    .social li {
+        display: inline;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
 }
 
 
@@ -125,10 +131,10 @@ ul.posts li a{
         border-bottom: 1px solid #d5d5d5;
         margin-bottom: 20px;
     }
+    
+    .social li {
+        display: inline;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
  }
-
-.social li {
-    display: inline;
-    margin-right: 10px;
-    margin-top: 0px;
-}
