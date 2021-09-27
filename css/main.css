@@ -65,7 +65,7 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
-    margin-left: 20px; 
+    margin-left: 0px; 
 }
 
 ul.posts li a{
