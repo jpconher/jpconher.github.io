@@ -3,20 +3,22 @@ layout: default
 title: Blog | Juan Pablo Conejero
 title2: Blog
 ---
-<h2>{{ page.title2 }}</h2>
-<ul class="posts">
-	{% for post in site.posts %}
-		{% unless post.next %}
-			<h3>{{ post.date | date: '%Y' }}</h3>
-		{% else %}
-			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-			{% if year != nyear %}
+<div class="blurb">
+	<h2>{{ page.title2 }}</h2>
+	<ul class="posts">
+		{% for post in site.posts %}
+			{% unless post.next %}
 				<h3>{{ post.date | date: '%Y' }}</h3>
-			{% endif %}
-		{% endunless %}
-		<li>
-			<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-		</li>
-	{% endfor %}
-</ul>
+			{% else %}
+				{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+				{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+				{% if year != nyear %}
+					<h3>{{ post.date | date: '%Y' }}</h3>
+				{% endif %}
+			{% endunless %}
+			<li>
+				<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+			</li>
+		{% endfor %}
+	</ul>
+</div><!-- /.blurb -->
