@@ -23,4 +23,7 @@ social:
   - https://www.linkedin.com/in/juanpabloconejero
   - https://github.com/jpconher
 
+# disqus
+theme:
+  disqus_shortname: "Juan Pablo"
 
