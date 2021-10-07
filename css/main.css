@@ -129,6 +129,6 @@ ul.posts li a{
     display: block;
 }
 
-.disqus_thread script {
-    margin-top: 30px;
+.post {
+    margin-bottom: 30px;
 }
