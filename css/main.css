@@ -25,7 +25,6 @@ nav ul {
 nav ul li {
     display: block;
     margin-bottom: 20px;
-    font-size: 12pt;
 }
 
 a {
@@ -35,6 +34,7 @@ a {
 
 nav ul li a{
     padding: 5px;
+    font-size: 1.2em;
 }
 
 h1 {
