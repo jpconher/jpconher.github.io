@@ -72,10 +72,6 @@ ul.posts li a{
     font-size: 1.2em;   
 }
 
-ul li {
-    font-size: 1.2em;
-}
-
 .flexcontainer {
     display: flex;
     flex-direction: column;    
