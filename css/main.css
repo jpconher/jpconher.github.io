@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1000px) { 
     body {
-        margin: 50px auto;
+        margin: 50pt auto;
         width: 70%;
         font-size: 14pt;
     }
@@ -8,7 +8,7 @@
 
 @media only screen and (max-width: 1000px) { 
     body {
-    margin: 10px auto;
+    margin: 10pt auto;
     width: 90%;
     font-size: 14pt;
     }
@@ -16,15 +16,15 @@
 
 nav ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+    padding: 0pt;
     list-style: none;
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 0pt;
 }
 
 nav ul li {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 20pt;
 }
 
 a {
@@ -33,7 +33,7 @@ a {
 }
 
 nav ul li a{
-    padding: 5px;
+    padding: 5pt;
 }
 
 h1 {
@@ -52,29 +52,29 @@ h3 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 14pt;
     line-height: 1.1em;
     color: #333;
 }
 
 ul.posts { 
     padding: 0;
-    margin-top: 20px;
-    margin-left: 0px;
+    margin-top: 20pt;
+    margin-left: 0pt;
 }
 
 ul.kaggle {
-    font-size: 16pt;
+    font-size: 14pt;
     color: #333;
 }
 
 ul.posts li {
     list-style: none;
-    margin-left: 0px; 
+    margin-left: 0pt; 
 }
 
 ul.posts li a{
-    font-size: 1.2em;   
+    font-size: 14pt;   
 }
 
 .flexcontainer {
@@ -84,16 +84,16 @@ ul.posts li a{
 
 @media only screen and (min-width: 800px) {
     .wrapper .sidebar{
-        width: 300px;
+        width: 300pt;
         height: 100%;
         background: #FFFFFF;
-        padding: 0px 0px;
+        padding: 0pt 0pt;
         position: fixed;
-        font-size: 1.2em;     
+        font-size: 14pt;     
     }
 
     .wrapper .container {
-        margin-left: 400px;
+        margin-left: 400pt;
     }
 }
 
@@ -106,12 +106,12 @@ ul.posts li a{
 }
 
 .wrapper .sidebar ul li a .fas{
-  width: 25px;
+  width: 25pt;
 }
 
 .profile {
-    margin-bottom: 20px;
-    max-width: 250px;
+    margin-bottom: 20pt;
+    max-width: 250pt;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -120,15 +120,15 @@ ul.posts li a{
 
 @media only screen and (max-width: 1000px) { 
     .social {
-        border-bottom: 2px solid #d5d5d5;
-        margin-bottom: 20px;
+        border-bottom: 2pt solid #d5d5d5;
+        margin-bottom: 20pt;
     }
 }
     
  .social li {
         display: inline;
-        margin-right: 10px;
-        padding-top: 20px;
+        margin-right: 10pt;
+        padding-top: 20pt;
  }
     
 .social lu {
