@@ -63,6 +63,10 @@ ul.posts {
     margin-left: 0px;
 }
 
+ul.kaggle {
+    font-size: 14px;
+}
+
 ul.posts li {
     list-style: none;
     margin-left: 0px; 
