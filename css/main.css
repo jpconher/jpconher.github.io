@@ -2,7 +2,7 @@
     body {
         margin: 50px auto;
         width: 70%;
-        font-size: 12pt;
+        font-size: 14pt;
     }
 }
 
@@ -10,7 +10,7 @@
     body {
     margin: 10px auto;
     width: 90%;
-    font-size: 12pt;
+    font-size: 14pt;
     }
 }
 
@@ -20,13 +20,11 @@ nav ul {
     list-style: none;
     font-weight: bold;
     margin-top: 0px;
-    font-size: 14pt;
 }
 
 nav ul li {
     display: block;
     margin-bottom: 20px;
-    font-size: 14pt;
 }
 
 a {
@@ -85,7 +83,8 @@ ul.posts li a{
         height: 100%;
         background: #FFFFFF;
         padding: 0px 0px;
-        position: fixed;  
+        position: fixed;
+        font-size: 1.2em;     
     }
 
     .wrapper .container {
