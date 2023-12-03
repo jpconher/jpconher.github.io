@@ -1,7 +1,6 @@
 # Site settings
 name                : "Juan Pablo Conejero y Herrera"
 title               : "Juan Pablo's personal website"
-title_separator     : "-"
 url                 : "https://jpconher.github.io"
 
 # Google Analytics
