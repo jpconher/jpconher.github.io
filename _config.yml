@@ -1,20 +1,20 @@
-name: "Juan Pablo's personal website"
-markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+# Site settings
+name                : "Juan Pablo Conejero y Herrera"
+title               : "Juan Pablo's personal website"
+title_separator     : "-"
+url                 : "https://jpconher.github.io"
 
 # Google Analytics
 google_analytics: G-C485CSRLQ2
 
-url: "https://jpconher.github.io"
-baseurl: ""
-
+# Plugins
 plugins: 
   - jekyll-seo-tag
   
 # SEO plugin
 author: Juan Pablo Conejero y Herrera
-image: https://avatars.githubusercontent.com/u/34621340?s=400&u=2cda0182c62a7bd08287ffc12b8b3d817baef1e1&v=4
-description: "Welcome to my personal website! I am a second year MSc in Statistics student at KU Leuven. Previously, research assistant at Banco de Espana and Bachelor in Economics at uc3m."
+image: https://avatars.githubusercontent.com/u/34621340?s=400&u=9e2097bb3ca0f59528cea8377ebe0c52a36763b8&v=4
+description: "Whelcome to my personal website! I am a data scientist currently working as a credit risk modeller."
 twitter:
   username: jpconher
   card: summary
