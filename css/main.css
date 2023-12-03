@@ -34,7 +34,8 @@ a {
 
 .topnav a{
     font-size: 17pt;
-    color: #000000;
+    color: #242526;
+    padding: 5pt;
 }
 
 nav ul li a{
