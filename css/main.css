@@ -32,6 +32,11 @@ a {
     color: #0000FF;
 }
 
+.topnav a{
+    font-size: 17pt;
+    color: #000000;
+}
+
 nav ul li a{
     padding: 5pt;
 }
