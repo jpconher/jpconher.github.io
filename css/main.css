@@ -77,6 +77,10 @@ ul.posts li a{
     font-size: 14pt;   
 }
 
+.sidebar p{
+    text-align: justify;
+}
+
 .flexcontainer {
     display: flex;
     flex-direction: column;    
