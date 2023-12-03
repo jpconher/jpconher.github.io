@@ -32,13 +32,6 @@ a {
     color: #0000FF;
 }
 
-.topnav a{
-    font-size: 22pt;
-    color: #242526;
-    padding: 10pt;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-
 nav ul li a{
     padding: 5pt;
 }
