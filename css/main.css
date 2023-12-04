@@ -1,53 +1,79 @@
+/* Page layout for devices with large screen */
 @media only screen and (min-width: 1000px) { 
+    
+    /* Affects the entire page */
     body {
         margin: 50pt auto;
-        width: 70%;
+        width: 80%;
         font-size: 14pt;
     }
 
+    /* Sidebar only */
     .wrapper .sidebar{
+        margin: -50pt auto;  
         width: 300pt;
         height: 100%;
-        padding: 0pt 0pt;
+        padding: 50pt 0pt 20pt; /* Space around sidebar */
         position: fixed;
         font-size: 14pt;     
     }
-
+    
+    /* Affects content */
     .wrapper .container {
-        margin-left: 400pt;
+        margin-left: 400pt; /* left margin with sidebar */
     }
 }
 
+/* Page layout for small screen devices */ 
 @media only screen and (max-width: 1000px) { 
+    
     body {
-    margin: 10pt auto;
-    width: 90%;
-    font-size: 14pt;
+      margin: 20pt auto;
+      width: 90%;
+      font-size: 14pt;
+    }
+  
+     /* Sidebar only */
+    .wrapper .sidebar{
+        margin: -20pt auto 20pt;  
+        height: 100%;
+        padding: 20pt 0pt 0pt; /* Space around sidebar */
+        position: static;
+        font-size: 14pt;     
     }
 }
 
-nav ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0pt;
-    list-style: none;
-    font-weight: bold;
-    margin-top: 0pt;
+/* Sidebar properties */
+.wrapper .sidebar{
+    max-width: 100%;
+    background: linear-gradient(to right, #FFFFFF 0%, #FAFAFA 2%, #FAFAFA 98%, #FFFFFF 100%); /* fade effect sidebar background colour
 }
 
-nav ul li {
+.wrapper .sidebar p {
+    max-width: 80%; /* Set the maximum width of the <p> element (i.e. short description) to 80% of the parent <div> */
+    margin: 0 auto; /* Center the <p> element within the <div> */
+}
+
+div.sidebar nav ul{
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  padding: 0pt;
+  list-style: none;
+  font-weight: bold;
+  margin-top: 10pt;
+}
+ 
+div.sidebar nav ul li {
     display: block;
     margin-bottom: 20pt;
-}
+ }
 
+/* Links */
 a {
     text-decoration: none;
     color: #0000FF;
 }
 
-nav ul li a{
-    padding: 5pt;
-}
-
+/* Headings */
 h1 {
     font-size: 22pt;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -63,80 +89,38 @@ h3 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
+/* Paragraph */
 p {
     font-size: 14pt;
     line-height: 1.1em;
     color: #333;
-}
+}   
 
-div.sidebar {
-    max-width: 100%; /* Set the maximum width of the <p> element to 80% of the parent <div> */
-}
-
-div.sidebar p {
-    max-width: 80%; /* Set the maximum width of the <p> element to 80% of the parent <div> */
-    margin: 0 auto; /* Center the <p> element within the <div> */
-}
-    
-
-ul.posts { 
-    padding: 0;
-    margin-top: 20pt;
-    margin-left: 0pt;
-}
-
-ul.kaggle {
-    font-size: 14pt;
-    color: #333;
-}
-
-ul.posts li {
-    list-style: none;
-    margin-left: 0pt; 
-}
-
-ul.posts li a{
-    font-size: 14pt;   
-}
-
-.flexcontainer {
-    display: flex;
-    flex-direction: column;    
-}
-
-.wrapper .sidebar{
-    background: #FAFAFA;
-
-.wrapper .sidebar ul li:hover a{
-  color: #3895D3;
-}
-
-.wrapper .sidebar ul li a .fas{
-  width: 25pt;
-}
-
+/* Profile picture properties */ 
 .profile {
     margin-bottom: 20pt;
-    max-width: 250pt;
+    max-width: 200pt;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
 }
 
+/* Social accounts */   
+ .social li {
+    display: inline;
+    margin-right: 10pt;
+    padding-top: 20pt;
+ }
+    
+.social lu {
+    display: block;
+}
+
+/* Social accounts for small screen devices */
 @media only screen and (max-width: 1000px) { 
     .social {
         border-bottom: 2pt solid #d5d5d5;
         margin-bottom: 20pt;
     }
-}
-    
- .social li {
-        display: inline;
-        margin-right: 10pt;
-        padding-top: 20pt;
- }
-    
-.social lu {
-    display: block;
 }
