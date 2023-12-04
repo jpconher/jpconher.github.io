@@ -57,7 +57,7 @@ p {
     color: #333;
 }
 
-.sidebar p {
+div.sidebar p {
     max-width: 80%; /* Set the maximum width of the <p> element to 80% of the parent <div> */
     margin: 0 auto; /* Center the <p> element within the <div> */
 }
