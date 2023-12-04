@@ -4,6 +4,18 @@
         width: 70%;
         font-size: 14pt;
     }
+
+    .wrapper .sidebar{
+        width: 300pt;
+        height: 100%;
+        padding: 0pt 0pt;
+        position: fixed;
+        font-size: 14pt;     
+    }
+
+    .wrapper .container {
+        margin-left: 400pt;
+    }
 }
 
 @media only screen and (max-width: 1000px) { 
@@ -92,24 +104,8 @@ ul.posts li a{
     flex-direction: column;    
 }
 
-@media only screen and (min-width: 800px) {
-    .wrapper .sidebar{
-        width: 300pt;
-        height: 100%;
-        background: #FFFFFF;
-        padding: 0pt 0pt;
-        position: fixed;
-        font-size: 14pt;     
-    }
-
-    .wrapper .container {
-        margin-left: 400pt;
-    }
-}
-
-.wrapper .sidebar h1{
-  color: #000000; 
-}
+.wrapper .sidebar{
+    background: #FAFAFA;
 
 .wrapper .sidebar ul li:hover a{
   color: #3895D3;
