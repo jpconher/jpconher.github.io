@@ -46,7 +46,7 @@
 /* Sidebar properties */
 .wrapper .sidebar{
     max-width: 100%;
-    background: linear-gradient(to right, #FFFFFF 0%, #FAFAFA 2%, #FAFAFA 98%, #FFFFFF 100%); /* fade effect sidebar background colour
+    background: linear-gradient(to right, #FFFFFF 0%, #FAFAFA 2%, #FAFAFA 98%, #FFFFFF 100%); /* fade effect sidebar background colour */
 }
 
 .wrapper .sidebar p {
