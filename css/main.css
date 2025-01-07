@@ -1,52 +1,10 @@
-/* Page layout for devices with large screen */
-@media only screen and (min-width: 1000px) { 
-    
-    /* Affects the entire page */
-    body {
-        margin: 50pt auto;
-        width: 80%;
-        font-size: 14pt;
-    }
-
-    /* Sidebar only */
-    .wrapper .sidebar{
-        margin: -50pt auto;  
-        width: 300pt;
-        height: 100%;
-        padding: 50pt 0pt 20pt; /* Space around sidebar */
-        position: fixed;
-        font-size: 14pt;     
-    }
-    
-    /* Affects content */
-    .wrapper .container {
-        margin-left: 400pt; /* left margin with sidebar */
-    }
-}
-
-/* Page layout for small screen devices */ 
-@media only screen and (max-width: 1000px) { 
-    
-    body {
-      margin: 20pt auto;
-      width: 90%;
-      font-size: 14pt;
-    }
-  
-     /* Sidebar only */
-    .wrapper .sidebar{
-        margin: -20pt auto 20pt;  
-        height: 100%;
-        padding: 20pt 0pt 0pt; /* Space around sidebar */
-        position: static;
-        font-size: 14pt;     
-    }
-}
 
 /* Sidebar properties */
 .wrapper .sidebar{
     max-width: 100%;
     background: linear-gradient(to right, #FFFFFF 0%, #FAFAFA 2%, #FAFAFA 98%, #FFFFFF 100%); /* fade effect sidebar background colour */
+    font-size: 1em;
+    overflow-y: auto; /* Enable vertical scrolling */  
 }
 
 .wrapper .sidebar p {
@@ -59,12 +17,12 @@ div.sidebar nav ul{
   padding: 0pt;
   list-style: none;
   font-weight: bold;
-  margin-top: 10pt;
+  margin-top: 1em;
 }
  
 div.sidebar nav ul li {
     display: block;
-    margin-bottom: 20pt;
+    margin-bottom: 1.5em;
  }
 
 /* Links */
@@ -80,18 +38,18 @@ h1 {
 }
 
 h2 {
-    font-size: 17pt;
+    font-size: 18pt;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
 h3 {
-    font-size: 14pt;
+    font-size: 16pt;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
 /* Paragraph */
 p {
-    font-size: 14pt;
+    font-size: 16pt;
     line-height: 1.1em;
     color: #333;
 }   
@@ -99,7 +57,8 @@ p {
 /* Profile picture properties */ 
 .profile {
     margin-bottom: 20pt;
-    max-width: 200pt;
+    max-width: 250px;
+    height: auto; /* Maintain aspect ratio */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -117,10 +76,53 @@ p {
     display: block;
 }
 
-/* Social accounts for small screen devices */
+/* Page layout for devices with large screen */
+@media only screen and (min-width: 1000px) { 
+    
+    /* Affects the entire page */
+    body {
+        margin: 50pt auto;
+        width: 80%;
+        max-width: 1200px;
+        font-size: 14pt;
+    }
+
+    /* Sidebar only */
+    .wrapper .sidebar{
+        margin: -50pt auto; 
+        width: 300pt; 
+        height: calc(100vh - 70px);
+        padding: 50pt 0pt 20pt; /* Space around sidebar */
+        position: fixed;     
+    }
+    
+    /* Affects content */
+    .wrapper .container {
+        margin-left: 400pt; /* left margin with sidebar */
+    }
+    
+}
+
+/* Page layout for small screen devices */ 
 @media only screen and (max-width: 1000px) { 
+    
+    body {
+      margin: 20pt auto;
+      width: 90%;
+      font-size: 14pt;
+    }
+  
+     /* Sidebar only */
+    .wrapper .sidebar{
+        margin: -20pt auto 20pt;  
+        height: 100%;
+        padding: 20pt 0pt 0pt; /* Space around sidebar */
+        position: static;    
+    }
+
     .social {
         border-bottom: 2pt solid #d5d5d5;
         margin-bottom: 20pt;
     }
+
 }
