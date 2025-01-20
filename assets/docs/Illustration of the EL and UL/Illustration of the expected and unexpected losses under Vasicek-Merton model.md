@@ -44,7 +44,7 @@ Under the Vasicek-Merton model, a loan/obligor defaults when $V_n$ falls below a
 
 The probability of default of loan/obligor \\(n\\) conditional to a realisation of \\(y=y_0\\) is
 
-$$PD(y_0)=P\left[V_n<T|y=y_0\right] = P\left[\sqrt{\rho}y_0 + \sqrt{1-\rho}\epsilon_n<T|y=y_0\right] = P\left[\epsilon_n < \frac{T-\sqrt{\rho}y_0}{\sqrt{1-\rho}}|y=y_0\right] = \Phi\left(\frac{T-\sqrt{\rho}y_0}{\sqrt{1-\rho}}| y=y_0\right)$$
+$$PD(y_0)=P\left(V_n<T|y=y_0\right) = P\left(\sqrt{\rho}y_0 + \sqrt{1-\rho}\epsilon_n<T|y=y_0\right) = P\left(\epsilon_n < \frac{T-\sqrt{\rho}y_0}{\sqrt{1-\rho}}|y=y_0\right) = \Phi\left(\frac{T-\sqrt{\rho}y_0}{\sqrt{1-\rho}}| y=y_0\right)$$
 
 where \\(\Phi()\\) is the cumulative standard normal distribution. The value of the threshold is a constant that can be set arbitrarily. In our case, we will derive an expression to find the value of the threshold that makes the expected value of the probability of default equal to an arbitrary value, \\(PD_{mean}\\).
 
