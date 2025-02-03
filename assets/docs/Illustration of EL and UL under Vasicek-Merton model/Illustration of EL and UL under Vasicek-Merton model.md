@@ -1,4 +1,4 @@
-# Illustration of the expected and unexpected losses under Vasicek-Merton model
+# Illustration of the expected and unexpected losses under the Vasicek-Merton model
 
 **Author: Juan Pablo Conejero Herrera**
 
