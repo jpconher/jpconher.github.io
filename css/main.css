@@ -31,6 +31,12 @@ a {
     color: #0000FF;
 }
 
+/* lists */
+ul {
+    font-size: 16pt;
+    line-height: 1.1em;
+}
+
 /* Headings */
 h1 {
     font-size: 22pt;
