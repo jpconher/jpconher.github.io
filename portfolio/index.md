@@ -19,7 +19,7 @@ Here are some projects I've worked on over the years. The topics vary, reflectin
  
 ### Kaggle
 
-<a href="https://www.kaggle.com/" target="_blank">Kaggle</a> serves as a platform for data science competitions. Below, you can find my solutions to various competitions:
+<a href="https://www.kaggle.com/" target="_blank">Kaggle</a> serves as a platform for data science competitions. Below, you can find my solutions to several competitions:
 
-- [Predicting house price with linear regression](https://www.kaggle.com/code/juanconher/predicting-house-price-with-linear-regression) (link to competition: [House Prices - Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)).
+- [Predicting house price with linear regression](https://www.kaggle.com/code/juanconher/predicting-house-price-with-linear-regression).
   
