@@ -15,7 +15,7 @@ My solutions in Python can be found in this <a href="https://github.com/jpconher
 
 Here are some projects I've worked on over the years. The topics vary, reflecting both my interests and my current job.
 
-- [Illustration of the expected and unexpected losses under the Vasicek-Merton model](../assets/portfolio/Vasicek_Merton_Model/Illustration of EL and UL under Vasicek-Merton model.pdf).
+- [Illustration of the expected and unexpected losses under the Vasicek-Merton model](../assets/portfolio/Illustration of EL and UL under Vasicek-Merton model.pdf).
  
 ### Kaggle
 
