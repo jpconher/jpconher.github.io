@@ -9,6 +9,7 @@ google_analytics: G-C485CSRLQ2
 # Plugins
 plugins: 
   - jekyll-seo-tag
+  - jekyll-sitemap
   
 # SEO plugin
 author: Juan Pablo Conejero y Herrera
