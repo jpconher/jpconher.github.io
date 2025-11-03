@@ -11,9 +11,9 @@ title2: Portfolio
 <a href="https://projecteuler.net/" target="_blank">Project Euler</a> is a website that comprises a vast collection of mathematical problems intended to be solved with computer algorithms. 
 My solutions in Python can be found in this <a href="https://github.com/jpconher/Project_Euler/">repository</a>. As a general rule, I strive to make them as computationally efficient as I can.
 
-### Projects
+### Articles
 
-Here are some projects I've worked on over the years. The topics vary, reflecting both my interests and my current job.
+Here are some articles I've written over the years. The topics vary, reflecting both my interests and my current job.
 
 - [Illustration of the expected and unexpected losses under the Vasicek-Merton model](../assets/portfolio/Illustration-of-EL-and-UL-under-Vasicek-Merton-model.pdf)
  
