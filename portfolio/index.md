@@ -16,6 +16,7 @@ My solutions in Python can be found in this <a href="https://github.com/jpconher
 Here are some articles I've written over the years. The topics vary, reflecting both my interests and my current job.
 
 - [Illustration of the expected and unexpected losses under the Vasicek-Merton model](../assets/portfolio/Illustration-of-EL-and-UL-under-Vasicek-Merton-model.pdf)
+- [Understanding boosted decision trees](../assets/portfolio/Understanding-Boosted-Decision-Trees.pdf)
  
 ### Kaggle
 
