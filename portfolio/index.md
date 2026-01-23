@@ -21,7 +21,7 @@ Here are some articles I've written over the years. The topics vary, reflecting 
 ### Kaggle
 
 <a href="https://www.kaggle.com/" target="_blank">Kaggle</a> serves as a platform for data science competitions. Below, you can find my solutions to several competitions:
-
+- [Hybrid ETS–XGBoost model for sales forecasting](https://www.kaggle.com/code/juanconher/hybrid-ets-xgboost-model-for-sales-forecasting)
 - [Spaceship Titanic](https://www.kaggle.com/code/juanconher/spaceship-titanic-with-decision-trees)
 - [House Prices - Advanced Regression Techniques](https://www.kaggle.com/code/juanconher/predicting-house-price-with-linear-regression)
   
