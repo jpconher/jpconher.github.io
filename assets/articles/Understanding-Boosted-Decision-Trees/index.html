@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my personal website! I am a data scientist currently working as a credit risk modeller.">
+    <title>Understanding Boosted Decision Trees | Juan Pablo Conejero</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+    
+
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Understanding Boosted Decision Trees Juan Pablo Conejero" />
+<meta name="author" content="Juan Pablo Conejero y Herrera" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Welcome to my personal website! I am a data scientist currently working as a credit risk modeller." />
+<meta name="twitter:description" property="og:description" content="Welcome to my personal website! I am a data scientist currently working as a credit risk modeller." />
+<link rel="canonical" href="http://localhost:4000/portfolio/Understanding-Boosted-Decision-Trees/" />
+<meta property="og:url" content="http://localhost:4000/portfolio/Understanding-Boosted-Decision-Trees/" />
+<meta property="og:site_name" content="Juan Pablo’s personal website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Understanding Boosted Decision Trees Juan Pablo Conejero" />
+<meta name="twitter:site" content="@jpconher" />
+<meta name="twitter:creator" content="@Juan Pablo Conejero y Herrera" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Juan Pablo Conejero y Herrera"},"description":"Welcome to my personal website! I am a data scientist currently working as a credit risk modeller.","headline":"Understanding Boosted Decision Trees Juan Pablo Conejero","url":"http://localhost:4000/portfolio/Understanding-Boosted-Decision-Trees/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-intro">
+          <img class="profile" src="https://avatars.githubusercontent.com/u/34621340?s=400&u=2cda0182c62a7bd08287ffc12b8b3d817baef1e1&v=4" alt="Portrait of Juan Pablo Conejero Herrera">
+          <h2>Juan Pablo Conejero Herrera</h2>
+        </div>
+
+        <p>I am a data scientist specialising in financial risk management, with a strong interest in statistics and economics.</p>
+
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="/">About me</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/assets/docs/CV_Juan_Conejero.pdf" target="_blank" rel="noopener">CV</a></li>
+          </ul>
+          <ul class="social">
+            <li><a href="https://www.linkedin.com/in/juanpabloconejero/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/jpconher" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+            <li><a href="mailto:juanpablo.conejero@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="container">
+        <h1 id="understanding-boosted-decision-trees">Understanding Boosted Decision Trees</h1>
+
+<p><strong>Author: Juan Pablo Conejero Herrera</strong></p>
+
+<p>This article explains the key concepts of gradient-boosted decision trees, including common regularisation techniques. The appendix discusses the importance of selecting an appropriate loss function to achieve optimal performance.</p>
+
+<p>The main source used in this article is <em>The Elements of Statistical Learning</em> by Hastie, Tibshirani, and Friedman (2009).</p>
+
+<h2 id="what-are-boosted-decision-trees">What are boosted decision trees?</h2>
+
+<p>Before defining what boosted decision trees are, it helps to clarify the notion of a <strong>weak classifier</strong>, that is, a model that performs only slightly better than random guessing. For instance, suppose we want to predict whether a stock index will rise next month. Then, provided monthly returns are positively correlated, a simple rule could be the following: if it rose last month, predict it will rise again; otherwise, predict it will fall. Such a rule is a weak classifier because it offers only marginal improvement over random guessing.</p>
+
+<p>The key idea of <strong>boosting</strong> is that <strong>combining many weak classifiers can yield a far more accurate model than relying on a single “strong” learner</strong>. Each new weak learner is trained to correct the mistakes of the previous ones, progressively focusing on harder cases and thereby reducing bias. Moreover, by aggregating the predictions of many learners, boosting produces a more stable model that is less sensitive to noise in the training data.</p>
+
+<p>Formally, boosting builds an <strong>additive model</strong> in which predictions are the sum of many weak learners. A boosted decision tree can be written as</p>
+
+\[\begin{equation}
+f_M(x)=\sum_{m=1}^{M}T(x;\Theta_m)
+\tag{1}
+\end{equation}\]
+
+<p>where $T(x;\Theta_m)$ denotes the prediction from the $m$-th decision tree with parameters $\Theta_m$, and $M$ is the total number of trees in the ensemble.</p>
+
+<h2 id="training-boosted-trees-the-forward-stagewise-approach">Training Boosted Trees: The Forward Stagewise Approach</h2>
+
+<p>The optimal parameters in the previous equation, $\hat{\Theta}_m$, can be estimated by minimising a loss function as</p>
+
+\[\begin{equation}
+\hat{\Theta}_m = \underset{\Theta_m}{\operatorname{arg min}} \sum_{i=1}^N L\left(y_i,\sum_{m=1}^{M}T(x_i;\Theta_m)\right)
+\tag{2}
+\end{equation}\]
+
+<p>That is, the optimal parameters for the decision tree $m$ are those that minimise the loss function for observations $i=1,…,N$.</p>
+
+<p>The expression above implies that to obtain the optimal parameters for decision tree $m$, we should consider the effect of $\Theta_m$ on the loss of the other trees which can be computationally intensive. In practice, a <strong>forward stagewise approach</strong> is followed and the optimal parameters for tree $m$ are estimated by considering as given the trees trained before $m$, that is the boosted tree $f_{m-1}$, and ignoring how the choice of $\Theta_m$ might affect future trees:</p>
+
+\[\begin{equation}
+\hat{\Theta}_m = \underset{\Theta_m}{\operatorname{arg min}} \sum_{i=1}^N L\left(y_i,f_{m-1}(x_i)+ T(x_i;\Theta_m)\right)
+\tag{3}
+\end{equation}\]
+
+<p>Although solving the optimisation problem in equation <strong>(3)</strong> is simpler than in equation <strong>(2)</strong>, it is still a complex problem since it involves determining both the optimal regions and their corresponding predictions. Depending on the loss function chosen, the problem can simplify considerably. For example, when an exponential loss function is considered, resulting in the <strong>AdaBoost algorithm</strong>, the optimisation simplifies into recursive weight updates that can be expressed in closed form. However, when more general loss functions are considered, the solution involves numerical optimisation that requires more computational effort. In these cases, approximations become necessary. This is what we will cover in the next section.</p>
+
+<h2 id="using-gradient-to-speed-up-training">Using gradient to speed up training</h2>
+
+<p>When the loss criterion is differentiable, its gradient provides valuable information about the direction of steepest descent, which we can exploit to guide the optimisation process more efficiently. Recall from equation <strong>(3)</strong> that in the forward stagewise approach, each tree $m$ is trained by choosing the parameters $\Theta_m$ that minimise the loss given the ensemble trained up to step $m-1$.</p>
+
+<p>Let $g_m$ denote the gradient of the loss evaluated at the current model $f_{m-1}$, with components</p>
+
+\[\begin{equation}
+g_{im} = \left[\frac{\delta L(y_i, f(x_i))}{\delta f(x_i)} \right]_{f(x_i)=f_{m-1}(x_i)}
+\tag{4}
+\end{equation}\]
+
+<p>A naive gradient-descent update would be</p>
+
+\[\begin{equation}
+f_m=f_{m-1}-\rho_m g_m
+\tag{5}
+\end{equation}\]
+
+<p>where $\rho_m$ is the learning rate. This update moves predictions in the direction that most reduces the loss, and with enough iterations it would converge to the minimiser. However, two issues arise. First, tree outputs are constrained since all observations within the same region of a tree must share the same prediction. This means the model cannot in general reproduce the exact gradient vector. Second, directly following the gradient would lead to overfitting, since the model would chase individual training points rather than patterns that generalise.</p>
+
+<p>A practical solution is to induce a new tree whose output is as close as possible to the (-) gradient. Specifically, for tree $m$ we would solve</p>
+
+\[\begin{equation}
+\hat{\Theta}_m = \underset{\Theta_m}{\operatorname{arg min}} \sum_{i=1}^N \left(-g_{im} - T(x_i;\Theta_m)\right)^2
+\tag{6}
+\end{equation}\]
+
+<p>In this way, the new tree approximates the gradient while respecting the structural constraints of decision trees. Because the tree partitions the space into regions, all points within a region share the same update, preventing the model from perfectly following the gradient of each observation. This introduces regularisation and reduces overfitting. Notice that it is important to keep trees shallow. If a tree were grown deep enough to give each observation its own leaf, the update would mimic the raw gradient, eliminating the regularising effect and likely causing overfitting.</p>
+
+<h2 id="avoiding-overfitting">Avoiding overfitting</h2>
+
+<p>So far, we have focused on how boosted trees are trained. However, no matter how powerful a model looks on paper, it will not perform well unless it is trained properly. A central challenge is avoiding one of the most common pitfalls in machine learning: <strong>overfitting</strong>.</p>
+
+<p>In short, overfitting occurs when the model learns patterns that are specific to the training set but not representative of the broader population. As a result, predictions on new data may be inaccurate, since they reflect not only genuine relationships but also noise or spurious patterns present only in the training data.</p>
+
+<p>There are several common strategies to reduce overfitting in boosted trees:</p>
+
+<ul>
+  <li><strong>Train shallow trees.</strong> Limiting the depth of trees (i.e. the number of terminal nodes) ensures that only the most important patterns are captured. These dominant patterns are more likely to generalise to the whole population.</li>
+  <li><strong>Balance learning rate and number of trees.</strong> The number of trees ($M$) should be tuned in relation to the learning rate ($\rho_t$). Typically, a small learning rate combined with a relatively large number of trees yields better generalisation.</li>
+  <li><strong>Use early stopping.</strong> After each new tree is added, the model’s performance can be evaluated on a validation set. If no improvement is observed for several iterations (e.g. 5), training is stopped to prevent overfitting.</li>
+  <li><strong>Subsample the training data.</strong> At each iteration, train the tree on a random subset of the observations (a method known as <strong>stochastic gradient boosting</strong>). For instance, using half of the training data per iteration reduces overfitting by introducing randomness and limiting the model’s ability to fit noise.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In conclusion, I would like to highlight the main strengths of gradient boosting decision trees (GBDTs). By exploiting the gradient of the loss function—something that is straightforward to compute for any differentiable function—GBDTs are typically efficient to train. At the same time, their predictive accuracy is among the highest within the family of decision tree–based methods.</p>
+
+<p>A particularly influential variant is <strong>eXtreme Gradient Boosting (XGBoost)</strong>, which extends GBDTs by incorporating second-order information about the loss function, among other things. XGBoost has become one of the most widely used machine learning methods, especially in competitive settings such as Kaggle.</p>
+
+<p>Of course, achieving top performance requires careful regularisation. Preventing overfitting through techniques such as shallow trees, learning rate tuning, early stopping, and subsampling is essential to ensure that boosted models generalise well to new data.</p>
+
+<h2 id="appendix-the-choice-of-loss-function-matters">Appendix: The choice of loss function matters</h2>
+
+<p>I included in this appendix two ideas which, although probably not as central as those discussed in the main body of the article, are still relevant for understanding boosted decision trees and achieving the best possible prediction accuracy.</p>
+
+<h3 id="fact-1-the-squared-error-is-not-a-good-choice-in-classification-problems">Fact 1: The squared error is not a good choice in classification problems</h3>
+
+<p>In classification tasks, one of the key ideas behind boosting decision trees is the use of margin-based loss functions—that is, functions that depend on the product of the true label $y \in {-1, 1}$ and the predicted score $f(x)$. But why not use something more familiar, like the squared error $(y - f(x))^2$?</p>
+
+<p><strong>Reason 1: Squared error is not well suited for gradient-based methods</strong></p>
+
+<p>Boosting methods rely on computing derivatives of the loss with respect to the model’s prediction $f(x)$. If $f(x) \in {-1, 1}$, the gradient is either zero or undefined, offering no useful direction for improvement.</p>
+
+<p>Even if $f(x)$ is treated as a continuous score (e.g. classification by thresholding its sign), squared error still performs poorly. It penalises confident but correct predictions—for example, if $y = 1$ and $f(x) = 2$, the loss is $(1 - 2)^2 = 1$, despite the prediction being correct with a large margin.</p>
+
+<p><strong>Reason 2: Squared error mishandles margins</strong></p>
+
+<p>In classification, we care not only about correctness but also about confidence. Suppose $y = 1$: predicting $f(x) = 2$ should be better than $f(x) = 0.1$, since the former has a larger margin. Similarly, an incorrect prediction with high confidence ($f(x) = -2$) should be penalised more than one with low confidence ($f(x) = -0.1$).</p>
+
+<p>Squared error ignores this nuance. It penalises even correct predictions with large margins and fails to differentiate between confident and unconfident mistakes.</p>
+
+<p>By contrast, the <strong>exponential loss</strong>:</p>
+
+\[\exp(-y f(x))\]
+
+<p>increases sharply for confident but incorrect predictions and decreases rapidly for correct predictions with larger margins. This behaviour aligns with the goals of classification: reward correct confidence, penalise confident errors.</p>
+
+<p>The figure below illustrates how exponential and squared error losses vary with the margin.</p>
+
+<h3 id="fact-2-choose-your-loss-function-carefully">Fact 2: Choose your loss function carefully</h3>
+
+<p>Given these desirable properties, should we always use exponential loss? Not necessarily.</p>
+
+<p>In the figure below, both exponential loss and deviance loss are plotted against the margin. For positive margins (i.e. correct predictions), they behave similarly. But for negative margins they diverge: an observation misclassified with a margin of -3 receives a loss three times higher under exponential loss than under deviance loss.</p>
+
+<p>At first glance, this seems beneficial—we want to discourage highly confident misclassifications. However, consider cases where the observation is mislabeled or is simply an outlier unlikely to reappear in the data. In such situations, exponential loss may place excessive emphasis on correcting this anomaly, pushing the model to capture noise rather than meaningful patterns.</p>
+
+<p>For this reason, if there is reason to suspect the data may contain wrong labels or outliers, it is often preferable to use deviance loss (or a similar function) instead of exponential loss.</p>
+
+<p><img src="output_8_0.png" alt="png" /></p>
+
+
+      </main>
+    </div>
+  </body>
+</html>
