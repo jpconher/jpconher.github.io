@@ -2,6 +2,11 @@
 name                : "Juan Pablo Conejero y Herrera"
 title               : "Juan Pablo's personal website"
 url                 : "https://jpconher.github.io"
+markdown            : kramdown
+highlighter         : rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Google Analytics
 google_analytics: G-C485CSRLQ2
