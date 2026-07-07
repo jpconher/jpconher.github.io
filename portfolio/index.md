@@ -13,8 +13,8 @@ title2: Portfolio
   <h3>Articles</h3>
   Here are a few articles I’ve written over the years, spanning both my personal interests and professional background.
   <ul>
-    <li><a href="assets/articles/Illustration-of-EL-and-UL-under-Vasicek-Merton-model/">Illustration of the expected and unexpected losses under the Vasicek-Merton model</a></li>
-    <li><a href="assets/articles/Understanding-Boosted-Decision-Trees/">Understanding boosted decision trees</a></li>
+    <li><a href="articles/Illustration-of-EL-and-UL-under-Vasicek-Merton-model/">Illustration of the expected and unexpected losses under the Vasicek-Merton model</a></li>
+    <li><a href="articles/Understanding-Boosted-Decision-Trees/">Understanding boosted decision trees</a></li>
   </ul>
 
   <h3>Kaggle</h3>
