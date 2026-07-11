@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Portfolio | Juan Pablo Conejero
-title2: Portfolio
+title: Projects | Juan Pablo Conejero
+title2: Projects
 ---
 
 <div class="page-shell">
